@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet"	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+	$(function(){
+		   $('.slider').bxSlider({
+		    	pager:false,
+		    	touchEnabled:false,
+		    	captions:true
+		  });
+		   $(".bx-pager .bx-default-pager").hide(0);
+	});
+</script>
+<style>
+	#container > tr > td:nth-child(1),#container > tr > td:nth-child(3){
+        width: 70px;
+        text-align: center;
+    }
+    #container > tr > td:nth-child(2){
+        width: 860px;
+    }
+    h1{
+        text-align: center;
+    }
+    table{
+        border: 1px solid black;
+        width: 800px;
+        height: 500px;
+        margin: 20px auto;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th,td{
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        text-align: center;
+    }
+    .sat{
+        color:blue;
+    }
+    .sun{
+        color:red;
+    }
+</style>
+</head>
+<body>
+	 <div class="container">
+	 	<div class="row">
+			<table class="col-xs-7">				
+			 	 <div class="slider">
+			 	 <h1>3월</h1>
+				<thead>
+		        	<tr>
+		            <th class="sun">일</th>
+		            <th>월</th>
+		            <th>화</th>
+		            <th>수</th>
+		            <th>목</th>
+		            <th>금</th>
+		            <th class="sat">토</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		          <tr>
+		            <td></td>
+		            <td>1</td>
+		            <td>2</td>
+		            <td>3</td>
+		            <td>4</td>
+		            <td>5</td>
+		            <td class="sat">6</td>
+		        </tr>
+		        <tr>   
+		            <td class="sun">7</td>
+		            <td>8</td>
+		            <td>9</td>
+		            <td>10</td>
+		            <td>11</td>
+		            <td>12</td>
+		            <td class="sat">13</td>
+		        </tr>
+		        <tr>    
+		            <td class="sun">14</td>
+		            <td>15</td>
+		            <td>16</td>
+		            <td>17</td>
+		            <td>18</td>
+		            <td>19</td>
+		            <td class="sat">20</td>
+		        </tr>
+		        <tr>
+		            <td class="sun">21</td>
+		            <td>22</td>
+		            <td>23</td>
+		            <td>24</td>
+		            <td>25</td>
+		            <td>26</td>
+		            <td class="sat">27</td>
+		        </tr>
+		        <tr>    
+		            <td class="sun">28</td>
+		            <td>29</td>
+		            <td>30</td>
+		            <td>31</td>
+		            <td></td>
+		            <td></td>
+		            <td></td>
+		        </tr>    
+			  
+			  
+		        <div class="row">
+					<div class="col-xs-offset2 col-xs-3">
+				        <div class="col-xs-1">
+								<ul class="pager">
+									<li class="previous"><a href="#">이전</a></li>
+								</ul>
+						</div>
+						<div class="col-xs-1">
+								<ul class="pager">
+									<li class="next"><a href="#">다음</a></li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+				</div>	
+				
+			</tbody>
+		</table>
+	</div>
+</div>    
+
+    
+	 <div class="row">
+	   <div class="col-xs-7">
+			<div class="slider">
+       			<div>
+				    	<figure>
+							<a href="1.jpg" target="img_detail"><img alt="" src="1.jpg"></a>
+							<figcaption>펜션 이름</figcaption>
+						</figure>
+				    </div>	 				
+				    <div>
+				    	<figure>
+							<a href="2.jpg" target="img_detail"><img alt="" src="2.jpg"></a>
+							<figcaption>펜션 이름</figcaption>
+						</figure>
+				    </div>	 				
+				    <div>
+				    	<figure>
+							<a href="3.jpg" target="img_detail"><img alt="" src="3.jpg"></a>
+							<figcaption>펜션 이름</figcaption>
+						</figure>
+				    </div>	 				
+				    <div>
+				    	<figure>
+							<a href="1.jpg" target="img_detail"><img alt="" src="1.jpg"></a>
+							<figcaption>펜션 이름</figcaption>
+						</figure>
+				    </div>	 				
+				    <div>
+				    	<figure>
+							<a href="1.jpg" target="img_detail"><img alt="" src="1.jpg"></a>
+							<figcaption>펜션 이름</figcaption>
+						</figure>
+				    </div>	 			
+	 			</div>
+			</div>		    	
+		</div>
+</body>
+</html>

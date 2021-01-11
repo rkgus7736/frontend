@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>until</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+		//.txt3부터 title 전까지		
+		$(".txt3").prevUntil(".title").css("color","orange");
+		//.txt3부터 txt6 까지
+		$(".txt3").nextUntil(".txt6").css("color","red");	
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="title">인접 관계 선택자</h1>
+		<p>내용 1</p>
+		<p>내용 2</p>
+		<p class="txt3">내용 3</p>
+		<p>내용 4</p>
+		<p>내용 5</p>
+		<p class="txt6">내용 6</p>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>날짜</title>
+<script>
+	var today = new Date(2020,11,11);
+	document.write(today.getTime(),"<br>");
+	var tomorrow = new Date(2020,11,12);
+	document.write(tomorrow.getTime(),"<br>");
+	//밀리초 -> 일 ---> 1000 * 60 * 60 * 24
+	document.write(tomorrow.getTime()-today.getTime(),"<hr>");
+	
+	//연말까지 얼마나 남았는지 체크
+	var tomorrow = new Date(2020,11,31);
+	document.write(tomorrow.getTime(),"<br>");
+	//밀리초 -> 일 ---> 1000 * 60 * 60 * 24
+	document.write(tomorrow.getTime()-today.getTime(),"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

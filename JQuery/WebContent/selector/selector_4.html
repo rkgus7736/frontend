@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>siblings</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+		// siblings : 자신을 제외한 형,동생요소를 한번에 다 선택하겠다
+		$(".txt").siblings().css("text-decoration","underline")
+		$("p").eq(1).not().css("background-color","red")
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>인접 관계 선택자</h1>
+		<p>내용 1</p>
+		<p class="txt">내용 2</p>
+		<p>내용 3</p>
+		<p>내용 4</p>
+	</div>
+</body>
+</html>

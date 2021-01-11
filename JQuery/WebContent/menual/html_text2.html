@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var count = 0;
+	$(function(){
+		$("#btn").click(function(){
+			//버튼 클릭이벤트 구현부분
+			//태그 조립
+			count++;
+			var str = "<tr>";
+			str += "<td>"+count+"<td>";
+			str += "<td>"+$("#person").val()+"<td>";
+			str += "<td>"+$("#money").val()+"<td>";
+			str += "</tr>"+$("#content").html();
+		
+			//document.getElementById("content").innerHTML += str;
+		
+			//document.getElementById("content").innerHTML += str; 동일한 부분
+			$("#content").html(str);
+			//html() --> 해당 선택자가 담고있는 html tag를 읽어옴
+			//html(tag) --> 해당 선택자가 담고있는 html tag를 교체
+			
+			//태그 추가 후 하는 일
+			$("#content > tr").click(function(){
+				alert("경고창 띄우기");
+			});
+		});
+		//문서 로드 시 하는 일
+		$("#content > tr").click(function(){
+			alert("경고창 띄우기");
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

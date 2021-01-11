@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>rock scissors paper</title>
+</head>
+<body>
+<h2>가위바위보 결과</h2>
+<p>사용자 <br><img alt="" width:"100" src="" id="player"></p>
+<p>컴퓨터 <br><img alt="" width:"100" src="" id="com"></p>
+<p id="result"></p>
+
+<script>
+	var player=1,com=1, result="";
+	//사용자로부터 번호 바위 1, 가위 2, 보 3
+	Player = Number (prompt("바위 1, 가위 2, 보 3 입력","1"));
+	//랜덤으로 컴퓨터 번호 입력
+	com = Math.floor(Math.random()*3)+1;
+	//승패는 result에 출력
+	if(player == com)
+		result = "비겼습니다.";
+	else if (player % 3 + 1 == com)
+		result = "player가 이겼습니다.";
+	else 
+		result = "computer가 이겼습니다."
+	
+	document.getElementById("result").innerHTML = result;
+	document.getElementById("player").setAttribute("src", player + ".png");
+	document.getElementById("com").setAttribute("src", com + ".png");
+</script>
+
+</body>
+</html>

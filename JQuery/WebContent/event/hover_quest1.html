@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>롤오버 이미지</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("img").hover(function(){
+			$(this).attr("src","search2.png");
+		},function(){ 
+		 	$(this).prop("src","search1.png");	
+		});		
+	});
+</script>
+<style>
+	img{
+	margin:50px;
+	}
+</style>
+</head>
+<body>
+	<img src="search1.png">
+</body>
+</html>

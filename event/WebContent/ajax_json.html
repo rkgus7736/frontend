@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function makeRequest(){
+		httpRequest = new XMLHttpRequest();
+		
+		if(!httpRequest) {
+			alert('XMLHTTP 인스턴스를 만들수가 없어요ㅠㅠ');
+			return false;
+		}
+		httpRequest.onreadystatechange = alertContents;
+		httpRequest.open('GET','http://rkgus7736.dothome.co.kr/papago.php');
+		//요청할 곳 (GET방식으로 해당하는 url에 요청)
+		httpRequest.send(); //서버에 요청하는 부분
+	}
+	function alertContents(){
+		if (httpRequest.readyState === XMLHttpRequest.DONE){ //이상없음, 응답완료
+		if (httpRequest.status === 200){ //200 code 정상적으로 받았음
+			//alert(httpRequest.responseText);
+			var result = httpResult.responseText;
+			result = result.split("<br>")[1];
+			var json_result = JSON.parse(result);
+			document.getElementById("view").innerHTML =
+				json_result.message.result.translatedText;
+		}else{
+			alert('request에 뭔가 문제가 있어요.');
+			}		
+		}
+	}
+	window.onload = function(){
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			makeRequest();
+		};
+	};
+</script>
+</head>
+<body>
+	<button id="btn">버튼</button>
+	<div id="view"></div>
+</body>
+</html>

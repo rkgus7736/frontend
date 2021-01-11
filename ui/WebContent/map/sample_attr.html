@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src="lib/jquery.js"></script>
+<script>
+	$(function(){
+		alert($("p").attr("t1")+" "+ $("p").attr("s1"));
+		alert($("#hide").val());
+	});
+</script>
+</head>
+<body>
+	<!-- 직접 속성 만들기 -->
+	<p t1="1234" s1="Hello">속성값 만들기</p>	
+	<!-- hidden으로 보이지않게 만들기 -->
+	<input type = "hidden" id="hide" value="test">
+</body>
+</html>

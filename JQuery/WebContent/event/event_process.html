@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>이벤트 처리 시점</title>
+<style type="text/css">
+	.border{
+		border : 1px solid red;
+	}
+</style>
+<script>
+window.onload = function() {
+	
+	document.getElementsByTagName("h1")[0].setAttribute("class","border");
+	document.getElementsByTagName("p")[0].setAttribute("class","border");
+}
+
+</script>
+</head>
+<body>
+	<div id="container">
+		<h1>제목</h1>
+		<p>내용</p>
+	</div>
+</body>
+</html>

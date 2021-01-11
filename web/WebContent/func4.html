@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 - return</title>
+<script>
+	//factorial 5를 입력하면 5,4,3,2,1를 전부 곱한 결과
+	function factorial(n){ 
+		var tot = 1;
+		while (n>0){
+			tot *= n;
+			n--;
+		}
+		return tot;
+	}
+	document.write(factorial(5));
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var user = navigator.userAgent.toLowerCase();
+	var os = ["window","iphone","android","ipad"];
+	
+	
+	for (i=0;i<os.length;i++){		
+		if(user.indexOf("window") != -1){
+			//document.write("<img src = 'img/"+os[i]+".png'>") : body에 이미지를 넣지않을거라면
+		}
+	}
+		
+		
+	//-1 : 해당하는 단어가 없다.
+	document.write(user.indexOf("window"),"<br>");
+	document.write(user.indexOf("iphone"),"<br>");
+	document.write(user.indexOf("android"),"<br>");
+	document.write(user.indexOf("ipad"),"<br>");
+	
+	
+</script>
+</head>
+<body>
+	<img id = "os" src = "img/os[i].png" >
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var color = ["red","yellow","blue","black"];
+	var i = 0;
+	function changeBackground(){
+		i++;
+		if(i>=color.length) i = 0;
+		//background-color : 원래 css방식 --> backgroundColor : 변수명은 '-' 사용하지 못함 
+		//-없애고 뒤에 단어를 바로 붙이는 대신 첫 글자가 대문자
+		document.getElementById("container").style.backgroundColor = color[i];
+	}
+</script>
+<style>
+	#container {
+		background-color: red;
+		width:200px;
+		height:200px;
+		border:1px solid black;
+	}
+</style>
+</head>
+<body>
+	<div id ="container">
+	</div>
+	//changeBackground 부분에 작업할 일을 넣어주면 됨 (비추천하는 방법)
+	<button onclick = "changeBackground();">배경색 바꾸기</button>
+</body>
+</html>

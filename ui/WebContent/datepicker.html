@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src="lib/jquery.js"></script>
+<script src="lib/jquery-ui.js"></script>
+<link rel="stylesheet" href="lib/jquery-ui.css"/>
+<script>
+	$(function() {
+		$("#date1").change(function() {
+			alert($(this).val());
+		});
+		$("#date2").datepicker();
+		$("#date2").change(function() {
+			alert($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+<form>
+	<div id="pop">
+		<input type="date" id="date1"><br>
+		<input type="text" id="date2"><br>
+	</div>
+</form>
+
+</body>
+</html>

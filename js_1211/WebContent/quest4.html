@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var n =1;
+	var result="<table>";
+	for(i=0;i<5;i++){
+		result += "<tr>";
+		for(j=0;j<5;j++){
+			result += "<td>" + n +"</td>";
+				n++;
+	}
+		result += "</tr>";
+	}
+		result += "</table>";
+		document.write(result);
+		
+</script>
+<style> 
+
+	table{
+		border-collapse: collapse;
+	}
+	td{
+		width:100px;
+		height: 100px;
+		text-align:center;
+		border:1px solid black;   	
+   }
+
+</style>
+</head>
+<body>
+	
+
+</body>
+</html>

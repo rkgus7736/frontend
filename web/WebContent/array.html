@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script>
+	//js에서 배열은 다양한 값들을 보관할수있다.
+	var arr=[100,"안녕하세요",true,3.1415];
+	//인덱스 번호는 0부터 시작
+	document.write("<h2>배열값 읽어오기 - 1 </h2>");
+	document.write(arr[0],"<br>");
+	document.write(arr[1],"<br>");
+	document.write(arr[2],"<br>");
+	document.write(arr[3],"<br>");
+	//배열 인덱스는 크기가 자동으로 늘어난다
+	arr[arr.length]="내용추가";
+	arr.push("push로 추가");
+	//반복문 이용해서 출력
+	document.write("<h2>배열값 읽어오기 - 2 </h2>");
+	for(i=0;i<arr.length;i++){
+		document.write(arr[i],"<br>");				
+	}
+	
+	//for - each : 배열 인덱스 값을 복사함
+	document.write("<h2>배열값 읽어오기 - 3 </h2>");
+	for(val in arr){
+		document.write(arr[val],"<br>"); //인덱스 번호로 나오는게 정상
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

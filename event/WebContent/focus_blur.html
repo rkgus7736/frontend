@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus, blur</title>
+<script>
+//onload 이벤트 처리 한 경우
+/* window.onload = function(){
+		alert("start");
+		var txt = document.getElementById("txt");
+		console.log(txt);
+		alert(txt.value); */
+	
+//onload 이벤트 처리 안한 경우
+	/* alert("start");
+		var txt = document.getElementById("txt");
+		console.log(txt);
+		alert(txt.value); */
+		
+window.onload = function(){
+	var txt = document.getElementById("txt");
+	var result = document.getElementById("result");
+	
+	txt.onfocus = function(){ // 마우스로 선택이 된 순간
+		txt.style.backgroundColor = "skyblue";
+		result.innerHTML = "onfocus event";
+	};
+	txt.onblur = function(){ // 마우스에서 선택이 풀린 순간
+		txt.style.backgroundColor = "white";
+		result.innerHTML = "onblur event";
+	};
+	
+}
+</script>
+</head>
+<body>
+
+	<input type ="text" id="txt" value="테스트 내용">
+	<div id="result"></div>
+	
+//	<script> 
+//  이벤트가 발생한후에 document를 불러와서 스크립트를 후에 써줘야함
+//		var txt = document.getElementById("txt");
+//		console.log(txt);
+//		alert(txt.value);
+//	</script>
+</body>
+</html>

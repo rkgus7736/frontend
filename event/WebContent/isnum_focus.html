@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		var id = document.getElementById("btn");
+		var txt = document.getElementById("txt");
+		id.onclick = function(){
+			alert(isNaN(txt.value));
+			//isNaN : '문자열이 숫자가 아니냐?' 아니면 true, 숫자면 false
+		}
+		txt.focus();//해당 태그 선택을 하는 함수
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="txt"><br>
+	<button id="btn">확인</button>
+</body>
+</html>

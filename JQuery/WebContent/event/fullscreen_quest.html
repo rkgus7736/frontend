@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../lib/jquery-3.5.1.min.js"></script>
+<script>
+        var color = ["red","green","blue","black","cadetblue","blueviolet"];
+        var index=0;
+        $(document).ready(function(){
+            $("div").each(function(i){
+                $(this).css("background",color[i]);
+            });
+     
+            $("#back").click(function(){
+                if(index > 0){
+                    index--;
+                    $(window).scrollTop(index*1040);
+                }
+
+            });
+            $("#next").click(function(){
+                if(index < 5){
+                    index++;
+                    $(window).scrollTop(index*1040);
+                }
+
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width: 100%;
+            height: 1040px;
+   
+        }
+        button{
+            padding:30px;
+            background-color:rgba(228, 228, 18, 0.5) ;
+            font-size: 60px;
+            display: inline-block;
+            position: fixed;
+            right: 20px;
+        }
+        #back{
+            top:300px;
+        }
+        #next{
+            top:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1"></div>
+    <div class="container2"></div>
+    <div class="container3"></div>
+    <div class="container4"></div>
+    <div class="container5"></div>
+    <div class="container6"></div>
+    <button id="back">△</button>
+    <button id="next">▼</button>
+</body>
+</html>
+
+

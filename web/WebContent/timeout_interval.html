@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var n = 0;
+	// setTimeout : 타이머 역할 (function부터 {딱 한번 몇초후에 해야할일을 적는 결과}, 5초면 5*1000)
+	var timeOutID = setTimeout(function() {
+		n++;
+		console.log("n : "+n);
+	}, 2000);
+	
+	//"timeOutID:" : 해당하는 setTimeout을 제거하기 위한 용도
+	document.write ("timeOutID:" + timeOutID,"<br>");
+	
+	var i = 0;
+	var intervalID = setInterval(function() {
+		i++;
+		console.log("i : "+i);
+	}, 2000);
+	document.write("intervalID:"+intervalID,"<br>")
+	
+</script>
+</head>
+<body>
+	// timeOut : 딱 한번 쓸때
+	<button onclick = "clearTimeout(timeOutID)">타임아웃 정지 </button>
+	//interval : 주기적으로 받아와야하는 정보가 있을때
+	<button onclick = "clearInterval(intervalID)">interval 정지 </button>
+</body>
+</html>

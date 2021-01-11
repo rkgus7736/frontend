@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+		$(function(){
+			$("input[type=radio]").click(function(){
+				//$(this).prev()클릭한 라디오버튼에 해당하는 이미지 선택
+				$(this).prev().attr("src","check.png");
+				$("label > img").not($(this).prev()).attr("src","noncheck.png");
+			});		
+		});
+</script>
+<style>
+	label img{
+	width:70px;
+	height:70px;
+	}
+	label{
+	font-size: 70px;	
+	}
+	input[type=radio]{
+	display:none;
+	}
+	button{
+	text-align: center;
+	font-size: 50px;
+	width:180px;
+	height:70px;
+	}
+</style>
+</head>
+<body>
+<form action="" method="get">
+	<label><img src = "check.png"><input type="radio" name="agree" id="agree" value="yes" checked>예
+	</label>
+	<label><img src = "noncheck.png"><input type="radio" name="agree" id="agree" value="no" >아니요</label>
+	<button>테스트</button>
+</form>
+</body>
+</html>

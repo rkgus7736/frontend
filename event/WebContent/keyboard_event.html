@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>키보드 이벤트</title>
+<script>
+	window.onload = function(){
+		var txt = document.getElementById("txt");
+		var result = document.getElementById("result");
+		//onkeydown : 눌렀을때
+	//	txt.onkeydown=function(e){
+	//		result.innerHTML = e.keyCode;
+		//onkeyup : 눌렀다 뗀 순간 , 입력됬을때
+		txt.onkeyup=function(e){
+			result.innerHTML = e.keyCode;
+		};
+	};
+	
+</script>
+</head>
+<body>
+	<input type="text" id="txt">
+	<div id ="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>펜션 관리 홈페이지</title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	header{
+		background-color: #e8e8e8;
+		width:1200px;
+		margin:0 auto;
+	}
+	#login > fiqure{
+		height: 40px;
+	}
+	#login > figure > img{
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		float:left;
+	}
+	#login > figure > figcaption{
+		float:left;
+	}
+	#login p{
+		padding:2px;
+	}
+	#login p:first-child {
+	 	font-size:14px;
+	 	font-weight: bold;
+	}
+	#login p:last-child {
+	 	font-size:12px;
+	 	color : gray;
+	}
+	.clear{
+		clear: both;
+	}
+	.right{
+		float:right;
+	}
+	#carousel{
+		width: 100%;
+		height: 300px;
+		position:relative;	
+	}
+	#carousel img{
+		width:100%;
+		height: 100%;
+	}
+	#carousel a:link, #carousel a:visited{
+		width:64px;
+		height:32px;
+		text-align:center;
+		padding-bottom:7px;
+		border-radius:32px;
+		font-size:32px;
+		line-height:32px;
+		font-weight : bold;
+		display:inline-block;	
+		position: absolute;
+		color:black;
+		text-decoration: none;
+		background-color: rgba(255,255,255,0.7);
+		
+	}
+	#carousel a:hover{
+		color:white;
+	}
+	#carousel a:active{
+		background-color: transparent;
+	}
+	#carousel a:first-child{
+		left: 10px;
+		top : 134px;
+	}
+	#carousel a:last-child{
+		right: 10px;
+		top : 134px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div id="login">
+			<figure class="right">
+				<img alt="" src="../resource/img/profile.jpg">
+				<figcaption>
+					<p>OOO님 로그인 하셨습니다.</p>
+					<p><a href="#">로그아웃</a> | <a href="#">정보수정</a></p>
+				</figcaption>
+			</figure>
+		</div>
+		<div id="carousel" class="clear">
+			<a href="#">&lt;&lt;</a>
+			<img alt="" src="../resource/img/house2.jpg">					
+			<a href="#">&gt;&gt;</a>					
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">예약</a></li>
+				<li><a href="#">펜션 스토리</a></li>
+				<li><a href="#">펜션 소개</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

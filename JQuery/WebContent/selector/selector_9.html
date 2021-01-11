@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+		$("ul li:first").css("color","red"); //전체 선택된 것들 중 제일 처음
+		$("ul li:last").css("color","blue"); //전체 선택된 것들 중 제일 마지막
+		
+		$("ul li:first-of-type").css("font-weight","bold");
+		$("ul li:last-of-type").css("font-style","italic");
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+		<li>메뉴5</li>
+	</ul>
+	<ul>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+		<li>메뉴5</li>
+	</ul>
+	<ul>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+		<li>메뉴5</li>
+	</ul>
+
+</body>
+</html>

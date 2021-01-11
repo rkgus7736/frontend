@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+</script>
+<script>
+	$(function() {
+		$("#main_menu > li").mouseenter(function(e) {
+			$("#sub_menu").stop().slideDown(500);
+		});
+		$("nav").mouseleave(function() {
+			$("#sub_menu").stop().slideUp(500);
+		});
+		$(".sub_menu_list > li").click(function() {
+			$("#sub_menu").stop().slideUp(500);
+		});
+	});
+</script>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	nav{
+		width: 1000px;
+		background-color: #e8e8e8;
+		text-align: center;
+		font-size: 0px;
+		margin:0 auto;
+		position: relative;
+	}
+	#main_menu{
+		list-style-type: none;
+		display: inline-block;
+	}
+	#sub_menu{
+	    width:1000px;
+		text-align: center;
+		display: none;
+		background-color: rgba(234,234,234,0.2);
+		position:absolute;
+		z-index: 2;
+	}
+	#main_menu > li{
+		float:left;
+	}
+	a:link,a:visited{
+		color: black;
+		text-decoration: none;
+		display: inline-block;
+		width:	200px;	
+		font-size:16px;
+		box-sizing : border-box;
+	}
+	li:hover{
+		background-color: #c2c2c2;
+	}
+
+	.sub_menu_list{
+		width: 200px;
+		display: inline-block;
+		
+	}
+	#main_banner{
+		width:1200px;
+		margin:0 auto;
+		position: relative;
+	}
+	
+	#main_banner > img{
+	width:1200px;
+	height: 200px;
+	position:fixed;
+	z-index: 1;
+
+	}
+</style>
+</head>
+<body>
+	
+	<nav>
+		<ul id = "main_menu">
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+		</ul>
+	<div id="sub_menu">
+		<ul class="sub_menu_list">
+			<li><a href="#">SUBMENU-1</a></li>
+			<li><a href="#">SUBMENU-2</a></li>
+			<li><a href="#">SUBMENU-3</a></li>
+			<li><a href="#">SUBMENU-4</a></li>
+		</ul>
+		<ul class="sub_menu_list">
+			<li><a href="#">SUBMENU-1</a></li>
+			<li><a href="#">SUBMENU-2</a></li>
+			<li><a href="#">SUBMENU-3</a></li>
+			<li><a href="#">SUBMENU-4</a></li>
+		</ul>
+		<ul class="sub_menu_list">
+			<li><a href="#">SUBMENU-1</a></li>
+			<li><a href="#">SUBMENU-2</a></li>
+			<li><a href="#">SUBMENU-3</a></li>
+			<li><a href="#">SUBMENU-4</a></li>
+		</ul>
+		<ul class="sub_menu_list">
+			<li><a href="#">SUBMENU-1</a></li>
+			<li><a href="#">SUBMENU-2</a></li>
+			<li><a href="#">SUBMENU-3</a></li>
+			<li><a href="#">SUBMENU-4</a></li>
+		</ul>
+		</div>
+		
+	</nav>
+	
+	<div id="main_banner">
+	<img src=casa32.jfif alt="">
+	</div>
+</body>
+</html>

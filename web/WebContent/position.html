@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		height: 5000px;
+	}
+	#popup1{
+		position:absolute;
+		background-color: red;
+		top:30px;
+		left:100px;
+	}
+	#popup2{
+		background-color: hotpink;
+		top:30px;
+		left: 100px;
+		position:fixed; 
+	}
+	#popup3{
+		background-color: lime;
+		top: 40px;
+		left:100px;
+		position:absolute;
+	}
+	.box{
+		width:200px;
+		height:200px;
+		border:1px solid black;
+	}
+	#container{
+		width:500px;
+		height:2000px;
+		margin:30px auto;
+		border: 1px solid black;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="popup1" class="box"></div>
+	<div id="popup2" class="box"></div>
+	<div id="popup3" class="box"></div>
+</body>
+</html>

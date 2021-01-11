@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폰트사이즈 변경</title>
+<style>
+	#content{
+		font-size:18px;
+	}
+</style>
+<script>
+	var fontSize = 16;
+	function minusFontSize(){
+		if(fontSize>0)fontSize--;
+		document.getElementById("content").style.fontSize = fontSize + "px";
+		}
+	function plusFontSize(){
+		if(fontSize<32)fontSize++;
+		document.getElementById("content").style.fontSize = fontSize + "px";
+		}
+	function resetFontSize(){
+		fontSize = 16;
+		document.getElementById("content").style.fontSize = fontSize + "px";
+		}
+</script>
+</head>
+<body>
+	<p id = "content">Hello World</p>
+	<button onclick="minusFontSize();">-</button> <!-- 해당 버튼 클릭시 폰트 크기 (1px씩)를 줄임 -->
+	<button onclick="resetFontSize();">default</button> <!-- 해당 버튼 클릭시 폰트 크기를 16px로 설정 -->
+	<button onclick="plusFontSize();">+</button> <!-- 해당 버튼 클릭시 폰트 크기 (1px씩)를 늘림 -->
+</body>
+</html>

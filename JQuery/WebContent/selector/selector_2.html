@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>간접 선택자</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+		$("#wrap > h1").css({
+			"background-color": "yellow",
+			"text-decoration" : "underline"		
+		});			
+		$("#wrap p").css("text-decoration","underline");		
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>인접 관계 선택자</h1>
+		<p>내용 1</p>
+		<section>
+			<h1>하위 요소 선택자</h1>
+			<p>내용 2</p>
+		</section>
+	</div>
+</body>
+</html>

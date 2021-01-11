@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>펜션 관리 홈페이지</title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	header{
+		background-color: #e8e8e8;
+		width:1200px;
+		margin:0 auto;
+	}
+	#login > fiqure{
+		height: 40px;
+	}
+	#login > figure > img{
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		float:left;
+	}
+	#login > figure > figcaption{
+		float:left;
+	}
+	#login p{
+		padding:2px;
+	}
+	#login p:first-child {
+	 	font-size:14px;
+	 	font-weight: bold;
+	}
+	#login p:last-child {
+	 	font-size:12px;
+	 	color : gray;
+	}
+	#login a:link,#login a:visited{
+		color: gray;
+		text-decoration: none;
+	}
+	.clear{
+		clear: both;
+	}
+	.right{
+		float:right;
+	}
+	#carousel{
+		width: 100%;
+		height: 300px;
+		position:relative;	
+	}
+	#carousel img{
+		width:100%;
+		height: 100%;
+	}
+	#carousel a:link, #carousel a:visited{
+		width:64px;
+		height:32px;
+		text-align:center;
+		padding-bottom:7px;
+		border-radius:32px;
+		font-size:32px;
+		line-height:32px;
+		font-weight : bold;
+		display:inline-block;	
+		position: absolute;
+		color:black;
+		text-decoration: none;
+		background-color: rgba(255,255,255,0.7);
+		
+	}
+	#carousel a:hover{
+		color:white;
+	}
+	#carousel a:active{
+		background-color: transparent;
+	}
+	#carousel a:first-child{
+		left: 10px;
+		top : 134px;
+	}
+	#carousel a:last-child{
+		right: 10px;
+		top : 134px;
+	}
+	
+	nav {
+		text-align: center;
+	}
+	nav > ul{
+		list-style-type : none;
+		display: inline-block;
+		font-size: 0px;
+	}
+	nav > ul > li{
+		display: inline-block;		
+	}
+	nav a:link,nav a:visited {
+		width:200px;
+		height:40px;
+		padding:10px 0px;
+		font-size:20px;
+		line-height:20px;
+		text-align:center;	
+		box-sizing:border-box;
+		display: inline-block;		
+		text-decoration: none;
+		color:black;
+	}
+	
+	section{
+		width:1200px;
+		margin : 0 auto;
+		margin-top: 20px;
+		
+	}
+	section > table{
+		width:570px;
+		border-collapse: collapse;
+		border-top: 2px solid gray;
+		border-bottom:2px solid gray;
+		float: left;
+		margin: 10px 15px;
+	}
+	th, td{
+		text-align: center;
+		padding:10px 0px;	
+	}
+	tr{
+		border-bottom:1px solid gray;
+	}
+	th{
+		background-color: #e8e8e8;
+	}
+	caption {
+	padding-bottom:10px;
+}
+
+	footer{
+		padding : 20px 40px;
+		width:1200px;
+		box-sizing : border-box;
+		background-color: #e8e8e8;
+		margin:0 auto;
+	}
+	footer ul{
+		list-style-type: none;
+	}
+	
+</style>
+</head>
+<body>
+	<header>
+		<div id="login">
+			<figure class="right">
+				<img alt="" src="../resource/img/profile.jpg">
+				<figcaption>
+					<p>OOO님 로그인 하셨습니다.</p>
+					<p><a href="#">로그아웃</a> | <a href="#">정보수정</a></p>
+				</figcaption>
+			</figure>
+		</div>
+		<div id="carousel" class="clear">
+			<a href="#">&lt;&lt;</a>
+			<img alt="" src="../resource/img/house2.jpg">					
+			<a href="#">&gt;&gt;</a>					
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">예약</a></li>
+				<li><a href="#">펜션 스토리</a></li>
+				<li><a href="#">펜션 소개</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<table>
+			<caption><h2>공지사항</h2></caption>
+			<tr>
+				<th>글번호</th>
+				<th>제목</th>
+				<th>작성일</th>
+				<th>조회수</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<table>
+			<caption><h2>공지사항</h2></caption>
+			<tr>
+				<th>글번호</th>
+				<th>제목</th>
+				<th>작성일</th>
+				<th>조회수</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+	
+	<footer class="clear">
+		<ul>
+			<li>사업자정보 : 2134124124</li>
+			<li>연락처 : 010-0000-0000</li>
+			<li>이메일 : OOOOOO @ gmail.com</li>
+			
+		</ul>
+	</footer>
+</body>
+</html>

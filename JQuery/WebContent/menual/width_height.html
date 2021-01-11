@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){
+// width : 요소의 크기 순수한 크기 만큼만.
+		console.log($("#d1").width());
+//innerWidth : width값과 padding값을 더한 값 -> box-sizing:border box;과 같음
+		console.log($("#d1").innerWidth());
+//outerHeight : width 값과 padding 값과 border 값을 더한 값.
+		console.log($("#d1").outerHeight());
+		
+	  $("#d2").width(100); 
+	  $("#d2").innerWidth(100);
+	  $("#d2").outerWidth(100); 
+		
+	});
+</script>
+<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	#d1{
+	width:100px;
+	height: 100px;
+	padding:30px;
+	border:10px solid black;
+	margin:30px;
+	}
+	#d2{
+	width:100px;
+	height: 100px;
+	padding:30px;
+	border:10px solid black;
+	box-sizing: border-box;
+	margin:100px;
+	}
+</style>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2"></div>
+</body>
+</html>

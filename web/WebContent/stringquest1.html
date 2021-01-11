@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이름과 번호 퀘스트</title>
+<script>
+	var name = prompt("영문 이름을 입력하세요","");
+	var tel = prompt("연락처를 입력하세요","");
+
+	name = name.toUpperCase();
+	//뒤에서부터 4자리만 들어가니까 tel.length -4 하고 뒷자리 *로 처리
+	tel = tel.substr(0,tel.length-4)+"****";
+	document.write(name,"<br>");
+	document.write(tel,"<br>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

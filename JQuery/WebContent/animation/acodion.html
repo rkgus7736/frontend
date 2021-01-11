@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+		$(function(){
+			$("h2").click(function(){
+				var index= $("h2").index($(this)); //현재 선택된 인덱스
+				$(this).next().slideDown(500);
+				$("h2").not($(this)).removeClass("active");
+				$(this).addClass("active");
+				$("p").not($(this).next().slideUp(500));
+				// 제외할 선택자를 넣어주면 제외할 애 빼고 볼수있음
+			});
+		});
+		
+	
+</script>
+<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	div{
+	border:1px solid black;
+	border-radius: 10px;
+	padding: 5px;
+	width:600px;
+	margin:40px auto;
+	}
+	div *{
+	font-size:16px;
+	}
+	h2{
+	background-color: #e9e9e9;
+	padding: 5px 20px; /* 글자를 왼쪽 벽에서 떨어트림 */
+	}
+	h2:hover{
+	background-color: #d1d1d1; /* 마우스 올라갔을때 색이 변함 */
+	}
+	p{
+	border:1px solid #e9e9e9;
+	padding:0px 20px;
+	display: none;
+	line-height: 20px;
+	}
+	h2:first-child +p {
+	display: block;
+	}
+	.active{
+	background-color: #b1b1b1;
+	color:white;
+	}
+</style>
+</head>
+<body>
+		<div>
+			<h2 class="active">이 헌법은 1988년 2월 25일부터 시행한다. </h2>
+				<p>
+					이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+				</p>
+		
+	
+			<h2>이 헌법은 1988년 2월 25일부터 시행한다. </h2>
+				<p>
+					이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+				</p>
+		
+			<h2>이 헌법은 1988년 2월 25일부터 시행한다. </h2>
+				<p>
+					이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+				</p>
+		
+	
+			<h2>이 헌법은 1988년 2월 25일부터 시행한다. </h2>
+				<p>
+					이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+				</p>
+		
+			<h2>이 헌법은 1988년 2월 25일부터 시행한다. </h2>
+				<p>
+					이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+				</p>		
+		</div>
+
+</body>
+</html>

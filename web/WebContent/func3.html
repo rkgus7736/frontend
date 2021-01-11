@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script> 
+	//매개변수가 2개면 데이터를 최대 2개까지 or 아예 받지않겠다.
+	//받아온 데이터가 없으면 undifined로 확인 가능
+	function showView(n1,n2){
+		if(n1==undifined)        n1=0;
+		if(n2==undifined)		 n2="문자열"
+		
+		document.write(n1," - ",n2,"<br>");
+		//typeof : 데이터 타입을 알려주는 것
+		document.write(typeof n1," - ",typeof n2,"<br>");
+	}
+	
+	showView(10,"test");
+	showView(10);
+	showView("test");
+	showView();
+	function showValue(obj){
+		document.getElementById("view").innerHTML = obj.value;
+	}
+</script>
+</head>
+<body>
+	<input type="password" onkeyup="showValue(txt)" id = "txt">
+	<div id = "view"></div>
+
+</body>
+</html>

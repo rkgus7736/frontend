@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=0caee9464a99b29ad7960fd88130de1e&libraries=services"></script>
+<script src="lib/jquery.js"></script>
+<script src="lib/jquery-ui.js"></script>
+<link rel="stylesheet" href="lib/jquery-ui.css"/>
+<script>
+	var list = null;
+	function drawMap(x,y){
+		var container = document.getElementById('map');
+		var options = {
+			center : new kakao.maps.LatLng(y, x),
+			level : 3
+		};
+
+		var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+		
+		var coords = new kakao.maps.LatLng(y,x);
+		
+		var marker = new kakao.maps.Marker({
+			map : map,
+			position: coords
+		});
+		
+		map.setCenter(coords);
+	}
+	
+	$(function() {
+		$("button").click(function() {
+			var places = new kakao.maps.services.Places();
+
+			var callback = function(result, status) {
+			    if (status === kakao.maps.services.Status.OK) {
+			    	list = result;
+			    	var tag = "";
+			        for(i=0;i<result.length;i++){
+			        	tag += "<p><a href='#'>"+result[i].place_name + " " + result[i].address_name+ "</a></p>";
+			        }
+			        $("#area").html(tag);
+			        //데이터를 뽑고 클릭 이벤트 설정
+			        $("p").click(function() {
+						//alert($(this).index());
+						var i = $(this).index();
+			        	//alert(list[i].place_name + " "+list[i].address_name);
+			        	drawMap(list[i].x, list[i].y)
+			        	
+			        	
+					});
+			    }
+			};
+
+			places.keywordSearch($("#address").val(), callback);
+			
+		});//button
+	});//main
+</script>
+<style>
+	#area{
+		width:600px;
+		height: 100px;
+		overflow: auto;
+	}
+	#map{
+		width:700px;
+		height: 400px;
+	
+	}
+</style>
+</head>
+<body>
+	<input type="text" id="address"><button>검색</button>
+	<div id="area"></div>
+	<div id="map"></div>
+</body>
+</html>

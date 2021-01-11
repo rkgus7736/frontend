@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<script src = "../lib/jquery-3.5.1.min.js"></script>
+<script>
+	$(function(){ //순서대로 써야함 focusin->focus->focusout->blur
+	  $("txt").on({"focusin":function(){  
+		  alert("focusin");
+	  },"focus": function(){
+		  alert("focus");
+	  },"focusout": function(){
+		  alert("focusout");
+	  },"blur": function(){
+		  alert("blur");
+		  }
+	  });
+	});
+	//focus : 해당 태그가 선택된 상태
+	//focusin : 해당 태그의 선택이 되는 순간
+	//focusout : 해당 태그의 선택이 풀리는 순간
+	//blur : 해당 태그가 선택이 풀린 상태
+</script>
+<body>
+	<input type="text" id="id"><br>
+</body>
+</html>
